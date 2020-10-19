@@ -1,0 +1,13 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "module": "commonjs",
+    "noEmit": false,
+    "rootDir": "./",
+    "incremental": true,
+    "outDir": "../build/electron",
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["../node_modules"],
+  "include": ["./**/*", "../common.d.ts"]
+}
