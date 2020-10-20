@@ -12,6 +12,10 @@
 /build
 /dist
 
+# database
+/leveldb/*
+!/leveldb/.gitkeep
+
 # misc
 .DS_Store
 .env.local

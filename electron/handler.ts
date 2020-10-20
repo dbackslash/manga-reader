@@ -1,6 +1,6 @@
 import { ipcMain } from 'electron';
 import { MangaReaderSpider } from './spiders';
-import { fetchManga, toggleFavManga } from './database';
+import { fetchManga, getFavorites, toggleFavManga } from './database';
 
 const spider = new MangaReaderSpider();
 
@@ -9,7 +9,11 @@ ipcMain.handle('topManga', (event) => {
 });
 
 ipcMain.handle('getMangaMeta', (event, manga: Manga) => {
-  return fetchManga(manga.site, manga.id);
+  return fetchManga(manga);
+})
+
+ipcMain.handle('getFavorites', (event) => {
+  return getFavorites();
 })
 
 ipcMain.handle('favManga', (event, manga: Manga, doc?: MangaDocument) => {

@@ -9,7 +9,7 @@ function MangaCard({ manga }: Props) {
 
   const handleFav = async () => {
     await callIpcQuery('favManga', manga, mangaDoc);
-    refetch();
+    refetch(manga);
   }
 
   return (

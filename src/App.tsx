@@ -6,6 +6,7 @@ import AppStateProvider, { useAppState } from './appState';
 import customTheme from './theme';
 import Layout from './components/Layout';
 import DiscoverScreen from 'screens/DiscoverScreen';
+import FavoritesScreen from 'screens/FavoritesScreen';
 
 declare global {
   interface Window {
@@ -35,7 +36,7 @@ function AppWithState() {
               <DiscoverScreen />
             </Route>
             <Route path="/favorite">
-              <Typography variant="h5" gutterBottom>Favorite</Typography>
+              <FavoritesScreen />
             </Route>
             <Route path="/settings">
               <Typography variant="h5" gutterBottom>Settings</Typography>

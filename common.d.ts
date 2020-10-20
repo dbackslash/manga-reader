@@ -15,6 +15,7 @@ declare interface Manga {
 declare interface MangaDocument {
   _id?: string;
   _rev?: string;
+  manga: Manga;
   favorite: boolean;
   readed: {[k: string]: number};
 }

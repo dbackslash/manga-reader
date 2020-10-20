@@ -50,7 +50,11 @@ export default function Layout({ title, children }: Props) {
           <List>
             {sidebarMenu.map(item => (
               <Link to={item.path} key={item.key} underline="none" color="textPrimary">
-                <ListItem button key={item.key}>
+                <ListItem
+                  button
+                  key={item.key}
+                  selected={item.path === location.pathname}
+                >
                   <ListItemIcon>{item.icon}</ListItemIcon>
                   <ListItemText primary={item.text} />
                 </ListItem>
